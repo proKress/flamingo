@@ -1,6 +1,12 @@
 {
   "candidates": [
     {
+      "flamingo": "v2.10.17",
+      "argocd": "v2.10.17",
+      "image": "v2.10.17-fl.23-main-a18a6b9b",
+      "flux": "v2.2.3"
+    },
+    {
       "flamingo": "v2.10.2",
       "argocd": "v2.10.2",
       "image": "v2.10.2-fl.23-main-d2c9a8cb",
