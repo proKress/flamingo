@@ -50,5 +50,4 @@ jobs:
           args: release --release-notes=output/notes.md --skip-validate
         env:
           GITHUB_TOKEN: ${{ secrets.HOMEBREW_TAP_GITHUB_TOKEN }}
-          HOMEBREW_TAP_GITHUB_TOKEN: ${{ secrets.HOMEBREW_TAP_GITHUB_TOKEN }}
           SERVER_VERSION: ${{ steps.get-server-version.outputs.server-version }}
