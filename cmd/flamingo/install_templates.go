@@ -13,7 +13,7 @@ resources:
 - "https://raw.githubusercontent.com/argoproj/argo-cd/{{ .ArgoCD }}/manifests/install.yaml"
 images:
 - name: quay.io/argoproj/argocd:{{ .ArgoCD }}
-  newName: ghcr.io/flux-subsystem-argo/fsa/argocd
+  newName: ghcr.io/prokress/fsa/argocd
   newTag: {{ .Image }}
 {{ .AnonymousPatches }}
 `
@@ -37,7 +37,7 @@ resources:
 - cluster.yaml
 images:
 - name: quay.io/argoproj/argocd:{{ .ArgoCD }}
-  newName: ghcr.io/flux-subsystem-argo/fsa/argocd
+  newName: ghcr.io/prokress/fsa/argocd
   newTag: {{ .Image }}
 {{ .AnonymousPatches }}
 `
@@ -155,6 +155,6 @@ spec:
   values:
     global:
       image:
-        repository: ghcr.io/flux-subsystem-argo/fsa/argocd
+        repository: ghcr.io/prokress/fsa/argocd
         tag: {{ .Image }}
 `

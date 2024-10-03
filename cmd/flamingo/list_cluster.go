@@ -3,7 +3,7 @@ package main
 import (
 	ctx "context"
 	"fmt"
-	"github.com/flux-subsystem-argo/flamingo/pkg/utils"
+	"github.com/prokress/flamingo/pkg/utils"
 	"github.com/spf13/cobra"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/labels"

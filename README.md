@@ -1,6 +1,6 @@
 # Flamingo - the Flux Subsystem for Argo
 
-> 🚀🚀🚀 **BREAKING:** Introducing the new [Flamingo CLI](https://github.com/flux-subsystem-argo/flamingo)! 🚀🚀🚀
+> 🚀🚀🚀 **BREAKING:** Introducing the new [Flamingo CLI](https://github.com/prokress/flamingo)! 🚀🚀🚀
 
 Flamingo is the **Flux Subsystem for Argo** (FSA). Flamingo's container image can be used as a drop-in extension for the equivalent ArgoCD version to visualize, and manage Flux workloads, alongside ArgoCD. You can also ensure that upstream CVEs in Argo CD are quickly backported to Flamingo, maintaining a secure and stable environment.
 
@@ -42,7 +42,7 @@ This guide will provide a step-by-step process for setting up a GitOps environme
 
 - [KIND CLI](https://kind.sigs.k8s.io/docs/user/quick-start/#installation) 
 - [Flux CLI](https://fluxcd.io/docs/cmd/)
-- [Flamingo CLI](https://github.com/flux-subsystem-argo/flamingo)
+- [Flamingo CLI](https://github.com/prokress/flamingo)
 
 Example install in macOS or Linux via [homebrew](https://brew.sh/)
 
@@ -58,7 +58,7 @@ brew install fluxcd/tap/flux
 brew install flux-subsystem-argo/tap/flamingo
 
 # or with cURL
-curl -sL https://raw.githubusercontent.com/flux-subsystem-argo/flamingo/main/install/flamingo.sh | sudo bash
+curl -sL https://raw.githubusercontent.com/prokress/flamingo/main/install/flamingo.sh | sudo bash
 ```
 
 ### Create a fresh KIND cluster
@@ -124,7 +124,7 @@ spec:
   values:
     global:
       image:
-        repository: ghcr.io/flux-subsystem-argo/fsa/argocd
+        repository: ghcr.io/prokress/fsa/argocd
         tag: v2.10.2-fl.23-main-d2c9a8cb # replace with the latest version
 EOF
 ```

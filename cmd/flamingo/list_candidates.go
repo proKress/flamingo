@@ -12,7 +12,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-const url = "https://raw.githubusercontent.com/flux-subsystem-argo/flamingo/main/index/index.json"
+const url = "https://raw.githubusercontent.com/prokress/flamingo/main/index/index.json"
 
 var listCandidates = &cobra.Command{
 	Use:     "list-candidates",

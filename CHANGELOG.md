@@ -88,4 +88,4 @@ Changes of the notable versions of the Flamingo CLI are documented in this file.
   * Add Flux v2.1.2 support to the dev channel 
   * Add `lc` alias for `list-candidates` command
   * Remove `--dev` flag out of the `install` command
-  * CLI repository migration from `flux-subsystem-argo/cli` to `flux-subsystem-argo/flamingo`
+  * CLI repository migration from `prokress/cli` to `prokress/flamingo`

@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/flux-subsystem-argo/flamingo/pkg/utils"
+	"github.com/prokress/flamingo/pkg/utils"
 	"github.com/spf13/cobra"
 	"k8s.io/client-go/tools/clientcmd"
 )

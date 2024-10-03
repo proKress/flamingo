@@ -1,4 +1,4 @@
-module github.com/flux-subsystem-argo/flamingo
+module github.com/prokress/flamingo
 
 go 1.20
 
