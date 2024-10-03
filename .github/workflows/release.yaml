@@ -44,7 +44,7 @@ jobs:
           echo "::set-output name=server-version::$(cat SERVER_VERSION)"
       - name: Run GoReleaser
         id: run-goreleaser
-        uses: goreleaser/goreleaser-action@v2
+        uses: goreleaser/goreleaser-action@v6
         with:
           version: latest
           args: release --release-notes=output/notes.md
