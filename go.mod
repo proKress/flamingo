@@ -1,6 +1,8 @@
 module github.com/prokress/flamingo
 
-go 1.20
+go 1.22.4
+
+toolchain go1.23.1
 
 require (
 	github.com/fluxcd/flux2/v2 v2.4.0
