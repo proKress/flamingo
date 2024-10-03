@@ -46,7 +46,11 @@ jobs:
           echo '[CHANGELOG](https://github.com/prokress/flamingo/blob/main/CHANGELOG.md)' > output/notes.md
 
       - name: Save state
+        id: save-state
         run: echo "{server-version}=$(cat SERVER_VERSION)" >> $GITHUB_STATE
+      - name: Save Output
+        id: save-output
+        run: echo "{server-version}=$(cat SERVER_VERSION)" >> $GITHUB_OUTPUT
 
       - name: Run GoReleaser
         id: run-goreleaser
@@ -57,4 +61,4 @@ jobs:
           version: '~> 2'
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
-          SERVER_VERSION: ${{ steps.get-server-version.outputs.server-version }}
+          SERVER_VERSION: ${{ steps.save-output.outputs.server-version }}
