@@ -52,7 +52,7 @@ jobs:
         id: run-goreleaser
         uses: goreleaser/goreleaser-action@v6
         with:
-          args: release --release-notes=output/notes.md --skip
+          args: release --release-notes=output/notes.md --skip validate --clean
           distribution: goreleaser
           version: '~> 2'
         env:
