@@ -3,3 +3,4 @@ bin/
 *.py
 
 cmd/flamingo/flamingo
+./dist

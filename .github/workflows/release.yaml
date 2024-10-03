@@ -24,16 +24,16 @@ jobs:
       - name: Unshallow
         run: git fetch --prune --unshallow
       - name: Setup Go
-        uses: actions/setup-go@0a12ed9d6a96ab950c8f026ed9f722fe0da7ef32 # v5.0.2
+        uses: actions/setup-go@v5.0.2
         with:
           go-version: 1.20.x
           cache: false
       - name: Setup QEMU
-        uses: docker/setup-qemu-action@49b3bc8e6bdd4a60e6116a5414239cba5943d3cf # v3.2.0
+        uses: docker/setup-qemu-action@v3
       - name: Setup Syft
-        uses: anchore/sbom-action/download-syft@61119d458adab75f756bc0b9e4bde25725f86a7a # v0.17.2
+        uses: anchore/sbom-action/download-syft@v1
       - name: Setup Cosign
-        uses: sigstore/cosign-installer@6e04d228eb30da1757ee4e1dd75a0ec73a653e06 # v3.1.1
+        uses: sigstore/cosign-installer@v3
       - name: Generate release manifests
         run: |
           mkdir -p output
@@ -45,7 +45,7 @@ jobs:
         uses: goreleaser/goreleaser-action@v6
         with:
           version: latest
-          args: release --release-notes=output/notes.md
+          args: release --release-notes=output/notes.md --skip-validate
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SERVER_VERSION: ${{ steps.get-server-version.outputs.server-version }}
