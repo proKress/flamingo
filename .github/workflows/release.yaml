@@ -38,10 +38,8 @@ jobs:
         run: |
           mkdir -p output
           echo '[CHANGELOG](https://github.com/prokress/flamingo/blob/main/CHANGELOG.md)' > output/notes.md
-      - name: Get server version
-        id: get-server-version
-        run: |
-          echo "::set-output name=server-version::$(cat SERVER_VERSION)"
+      - name: Save state
+        run: echo "{server-version}=$(cat SERVER_VERSION)" >> $GITHUB_STATE
       - name: Run GoReleaser
         id: run-goreleaser
         uses: goreleaser/goreleaser-action@v6
